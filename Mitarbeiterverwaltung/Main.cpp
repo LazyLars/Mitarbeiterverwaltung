@@ -17,15 +17,29 @@ int main (void)
 	//Einzellner Mitarbeiter
 	TMitarbeiter neuerMitarbeiter;
 	int anzahl = 0;
+	bool loop= false;
+	char answer;
 
-
+	while(!loop)
+	{
 	neuerMitarbeiter = MitarbeiterEinlesen();
 
 	anzahl = MitarbeiterHinzufuegen (mitarbListe, anzahl, neuerMitarbeiter);
 	
 	MitarbeiterlisteAusgeben (mitarbListe, anzahl);
 
-	system ("pause");
+	//MitarbeiterNachIDSuchen(mitarbListe, anzahl);
 
+	system ("pause");
+	cout <<"Wiederholen?" <<endl;
+	cin >> answer;
+	if(answer == 'j')
+		loop = false;
+	else
+		loop = true;
+	}
+	SortiereMitarbeiterNachGehalt(mitarbListe,anzahl);
+
+	system ("pause");
 }
 
