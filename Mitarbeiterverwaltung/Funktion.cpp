@@ -118,7 +118,7 @@ void Quicksort(TMitarbeiter werte[],int left,int right)
 			Quicksort(werte, i, right);
 	}
 }
-//HAHAHAHAHAHAHAHAAHHAHAHAHAHHA
+
 
 void SortiereMitarbeiterNachGehalt(TMitarbeiter liste[], int anzahl)
 {
